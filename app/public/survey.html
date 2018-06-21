@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <title>Friend-Finder</title>
+</head>
+<body>
+<div class="container">   
+<div class="jumbotron">
+  <h1 class="display-4">Survey Questionnaire</h1> 
+  <hr class="my-4">
+  <h2>About You. . .</h2>
+    <form method="POST" role="">
+    <div class="form-group">
+      <h5><label for="nameInput">Name (required)</label></h5>
+      <input type="text" class="form-control" id="userName" required>
+        </div>
+    <div class="form-group">
+        <h5><label for="nameInput">Link To Photo Image (required)</label></h5>
+      <input type="text" class="form-control" id="userImage" required>
+    </div>
+  </form> 
+ </div>
+ <p class="text-center">Answer each question below by indicating how strongly each statment is to you.<br>
+  <class="font-weight-light">1 meaning you <em>Strongly Disagree</em> and 5 meaning you <em>Strongly Agree</em></p>
+    
+  <h3>Question 1</h3>
+    <h5>You enjoy being social and meeting new people (social butterfly)</h5>
+<div id="Q1" class="selected">
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="question1" id="q1-1" value="1">
+  <label class="form-check-label" for="q1-2"> 1 </label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="question1" id="q1-2" value="2">
+  <label class="form-check-label" for="q1-2"> 2 </label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="question1" id="q1-3" value="3">
+  <label class="form-check-label" for="q1-3"> 3 </label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="question1" id="q1-4" value="4">
+  <label class="form-check-label" for="q1-4"> 4 </label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="question1" id="q1-5" value="5">
+  <label class="form-check-label" for="q1-5"> 5 </label>
+</div>
+</div>
+<hr>
+
+<h3>Question 2</h3>
+<h5>You prefer to follow a schedule or agenda</h5>
+<div id="Q2" class="selected">
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question2" id="q2-1" value="1">
+<label class="form-check-label" for="q2-1"> 1 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question2" id="q2-2" value="2">
+<label class="form-check-label" for="q2-2"> 2 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question2" id="q2-3" value="3">
+<label class="form-check-label" for="q2-3"> 3 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question2" id="q2-4" value="4">
+<label class="form-check-label" for="q2-4"> 4 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question2" id="q2-5" value="5">
+<label class="form-check-label" for="q2-5"> 5 </label>
+</div>
+</div>
+<hr>
+
+<h3>Question 3</h3>
+<h5>You enjoy trying to understand complicated ideas</h5>
+<div id="Q3" class="selected">
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question3" id="q3-1" value="1">
+<label class="form-check-label" for="q3-1"> 1 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question3" id="q3-2" value="2">
+<label class="form-check-label" for="q3-2"> 2 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question3" id="q3-3" value="3">
+<label class="form-check-label" for="q3-3"> 3 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question3" id="q3-4" value="4">
+<label class="form-check-label" for="q3-4"> 4 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question3" id="q3-5" value="5">
+<label class="form-check-label" for="q3-5"> 5 </label>
+</div>
+</div>
+<hr>
+
+<h3>Question 4</h3>
+<h5>You tend to avoid conflict</h5>
+<div id="Q4" class="selected">
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question4" id="q4-1" value="1">
+<label class="form-check-label" for="q4-1"> 1 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question4" id="q4-2" value="2">
+<label class="form-check-label" for="q4-2"> 2 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question4" id="q4-3" value="3">
+<label class="form-check-label" for="q4-3"> 3 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question4" id="q4-4" value="4">
+<label class="form-check-label" for="q4-4"> 4 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question4" id="q4-5" value="5">
+<label class="form-check-label" for="q4-5"> 5 </label>
+</div>
+</div>
+<hr>
+
+<h3>Question 5</h3>
+<h5>You tend to put the needs of others before your own</h5>
+<div id="Q5" class="selected">
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question5" id="q5-1" value="1">
+<label class="form-check-label" for="q5-1"> 1 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question5" id="q5-2" value="2">
+<label class="form-check-label" for="q5-2"> 2 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question5" id="q5-3" value="3">
+<label class="form-check-label" for="q5-3"> 3 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question5" id="q5-4" value="4">
+<label class="form-check-label" for="q5-4"> 4 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question5" id="q5-5" value="5">
+<label class="form-check-label" for="q5-5"> 5 </label>
+</div>
+</div>
+<hr>
+
+<h3>Question 6</h3>
+<h5>You are often the center of attention</h5>
+<div id="Q6" class="selected">
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question6" id="q6-1" value="1">
+<label class="form-check-label" for="q6-1"> 1 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question6" id="q6-2" value="2">
+<label class="form-check-label" for="q6-2"> 2 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question6" id="q6-3" value="3">
+<label class="form-check-label" for="q6-3"> 3 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question6" id="q6-4" value="4">
+<label class="form-check-label" for="q6-4"> 4 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question6" id="q6-5" value="5">
+<label class="form-check-label" for="q6-5"> 5 </label>
+</div>
+</div>
+<hr>
+
+<h3>Question 7</h3>
+<h5>You like talking about feelings and emotions</h5>
+<div id="Q7" class="selected">
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question7" id="q7-1" value="1">
+<label class="form-check-label" for="q7-1"> 1 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question7" id="q7-2" value="2">
+<label class="form-check-label" for="q7-2"> 2 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question7" id="q7-3" value="3">
+<label class="form-check-label" for="q7-3"> 3 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question7" id="q7-4" value="4">
+<label class="form-check-label" for="q7-4"> 4 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question7" id="q7-5" value="5">
+<label class="form-check-label" for="q7-5"> 5 </label>
+</div>
+</div>
+<hr>
+
+<h3>Question 8</h3>
+<h5>You are curious about the unknown</h5>
+<div id="Q8" class="selected">
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question8" id="q8-1" value="1">
+<label class="form-check-label" for="q8-1"> 1 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question8" id="q8-2" value="2">
+<label class="form-check-label" for="q8-2"> 2 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question8" id="q8-3" value="3">
+<label class="form-check-label" for="q8-3"> 3 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question8" id="q8-4" value="4">
+<label class="form-check-label" for="q8-4"> 4 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question8" id="q8-5" value="5">
+<label class="form-check-label" for="q8-5"> 5 </label>
+</div>
+</div>
+<hr>
+
+<h3>Question 9</h3>
+<h5>You consider yourself an active person</h5>
+<div id="9" class="selected">
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question9" id="q9-1" value="1">
+<label class="form-check-label" for="q9-1"> 1 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question9" id="q9-2" value="2">
+<label class="form-check-label" for="q9-2"> 2 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question9" id="q9-3" value="3">
+<label class="form-check-label" for="q9-3"> 3 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question9" id="q9-4" value="4">
+<label class="form-check-label" for="q9-4"> 4 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question9" id="q9-5" value="5">
+<label class="form-check-label" for="q9-5"> 5 </label>
+</div>
+</div>
+<hr>
+
+<h3>Question 10</h3>
+<h5>You love learning new things</h5>
+<div id="Q10" class="selected">
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question10" id="q10-1" value="1">
+<label class="form-check-label" for="q10-1"> 1 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question10" id="q10-2" value="2">
+<label class="form-check-label" for="q10-2"> 2 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question10" id="q10-3" value="3">
+<label class="form-check-label" for="q10-3"> 3 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question10" id="q10-4" value="4">
+<label class="form-check-label" for="q10-4"> 4 </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="question10" id="q10-5" value="5">
+<label class="form-check-label" for="q10-5"> 5 </label>
+</div>
+</div>
+<hr>
+<input id="submit" class="btn btn-primary" type="submit" value="Submit" data-toggle="modal">
+<!-- Button trigger modal -->
+<!-- <input type="button" id="Submit" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" value="Submit"> -->
+<!-- Modal -->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Your ideal match is...</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Lets Connect</button>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+</div> 
+
+<script type="text/javascript">
+
+var surveyArr = [];
+
+$("#submit").on("click", function(event) {
+    event.preventDefault();
+
+    function surveyComplete() {
+        var isComplete = true;
+        $(".form-group").each(function() {
+            if($(this).val() === "") {
+                isComplete = false;
+            }
+        });
+        $(".selected").each(function() {
+            if($(this).val() === "") {
+                isComplete = false;
+            }
+        });
+        return isComplete;
+    }
+
+    console.log("lin343", surveyComplete())
+        if (surveyComplete()) {
+         
+            var newFriends = [
+                {
+                name: $("#userName").val().trim(),
+                photo: $("#userImage").val(),
+                score: [
+                    $("#Q1").val(),
+                    $("#Q2").val(),
+                    $("#Q3").val(),
+                    $("$Q4").val(),
+                    $("#Q5").val(),
+                    $("#Q6").val(),
+                    $("#Q7").val(),
+                    $("#Q8").val(),
+                    $("#Q9").val(),
+                    $("#Q10").val()
+                ]
+            }
+        ];
+        console.log(newFriends)
+        $.post("/api/friends", newFriends).then(function(data) {
+        console.log("user input", data)
+    });
+   
+    }
+   
+        
+});
+
+ 
+
+
+</script>
+
+
+
+</body>
+</html>
