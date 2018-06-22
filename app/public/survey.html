@@ -348,62 +348,11 @@ $("#submit").on("click", function(event) {
     $.post("/api/friends", newFriends).then(function(data) {
     console.log("user input", data)
 
-        
+     $("#matchMade").html(data) 
 
     });    
         
 });
-
-// $("#submit").on("click", function(event) {
-//     event.preventDefault();
-// console.log("heyyy - 328");
-//     function surveyComplete() {
-//         var isComplete = true;
-//         $(".form-group").each(function() {
-//             if($(this).val() === "") {
-//                 isComplete = false;
-//             }
-//         });
-//         $(".selected").each(function() {
-//             if($(this).val() === "") {
-//                 isComplete = false;
-//             }
-//         });
-//         return isComplete;
-//     }
-
-//         if (surveyComplete()) {
-         
-//             var newFriends = [
-//                 {
-//                 name: $("#userName").val().trim(),
-//                 photo: $("#userImage").val(),
-//                 score: [
-//                     $("#Q1").val(),
-//                     $("#Q2").val(),
-//                     $("#Q3").val(),
-//                     $("$Q4").val(),
-//                     $("#Q5").val(),
-//                     $("#Q6").val(),
-//                     $("#Q7").val(),
-//                     $("#Q8").val(),
-//                     $("#Q9").val(),
-//                     $("#Q10").val()
-//                 ]
-//             }
-//         ];
-//         console.log(newFriends)
-
-//         $.post("/api/friends", newFriends).then(function(data) {
-//         console.log("user input", data)
-//     });
-   
-//     }
-   
-        
-// });
-
-
 
           
 

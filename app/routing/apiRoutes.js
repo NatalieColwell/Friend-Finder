@@ -51,13 +51,13 @@ module.exports = function(app) {
 
         friends.push(newFriends);  
         
-        console.log("surveyArr" + surveyArr)
-        console.log("match")
+        // console.log("surveyArr" + surveyArr)
+        // console.log("match")
 
-        console.log(name)
-        console.log(photo)
+        // console.log(name)
+        // console.log(photo)
 
-        res.send("Name:" + name);
+        res.send("Name:" + name + "<img src = ' " + photo + " ' > ");
 
         // res.json(newFriends);
     });
