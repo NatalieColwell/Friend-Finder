@@ -9,7 +9,7 @@ module.exports = function(app) {
     });
 
     app.get('/api/friends/:friends', function(req, res) {
-        var friends = req.params.friend;
+        var friends = req.params.friends;
         console.log(friends)
 
         for (var i = 0; i < friends.length; i++) {
@@ -22,14 +22,44 @@ module.exports = function(app) {
     
     app.post('/api/friends', function(req, res) {
         var newFriends = req.body;
-
         // newFriends = userInput.name.replace(/\s+/g, "").toLowerCase();
+        console.log(newFriends);
 
-        console.log("line28", newFriends);
+        var surveyArr = [];
+        
+        for (var i = 0; i < friends.length; i++) {
+            var scoreMatch = 0;
+            for (var j = 0; j < newFriends.score.length; j++) {
+                scoreMatch += Math.abs(parseInt(friends[i].score[i]) - parseInt(newFriends.score[j]));
+            }
+            surveyArr.push(scoreMatch);
+        }
 
-        friends.push(newFriends);
+        var compFriends = surveyArr[0];
 
-        res.json(newFriends);
+        for (var i = 0; i < surveyArr.length; i++) {
+            if(surveyArr[i] < compFriends) {
+                compFriends = surveyArr[i];
+            }
+        }
+
+        var match1 = surveyArr.indexOf(compFriends);
+        var match2 = friends[match1];
+
+        var name = match2.name;
+        var photo = match2.photo;
+
+        friends.push(newFriends);  
+        
+        console.log("surveyArr" + surveyArr)
+        console.log("match")
+
+        console.log(name)
+        console.log(photo)
+
+        res.send("Name:" + name);
+
+        // res.json(newFriends);
     });
 
 }

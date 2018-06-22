@@ -17,7 +17,7 @@
   <h1 class="display-4">Survey Questionnaire</h1> 
   <hr class="my-4">
   <h2>About You. . .</h2>
-    <form method="POST" role="">
+    <form method="POST">
     <div class="form-group">
       <h5><label for="nameInput">Name (required)</label></h5>
       <input type="text" class="form-control" id="userName" required>
@@ -290,9 +290,10 @@
 </div>
 </div>
 <hr>
-<input id="submit" class="btn btn-primary" type="submit" value="Submit" data-toggle="modal">
+<!-- <button type="button" class="btn btn-primary btn-lg" id="submit"><i class="fas fa-check-circle"></i> Submit</button> -->
+<!-- <button id="submit" class="btn btn-primary" type="submit" value="Submit">submit</button> -->
 <!-- Button trigger modal -->
-<!-- <input type="button" id="Submit" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" value="Submit"> -->
+<input type="button" id="submit" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" value="Submit">
 <!-- Modal -->
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 <div class="modal-dialog modal-lg">
@@ -303,7 +304,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
+      <div id="matchMade" class="modal-body">
         ...
       </div>
       <div class="modal-footer">
@@ -320,58 +321,91 @@
 
 <script type="text/javascript">
 
-var surveyArr = [];
+
 
 $("#submit").on("click", function(event) {
     event.preventDefault();
+    console.log("heyyy - 328");
+    var newFriends = 
+        {
+        name: $("#userName").val().trim(),
+        photo: $("#userImage").val(),
+        score: [
+            $('input:radio[name="question1"]:checked').val(),
+            $('input:radio[name="question2"]:checked').val(),
+            $('input:radio[name="question3"]:checked').val(),
+            $('input:radio[name="question4"]:checked').val(),
+            $('input:radio[name="question5"]:checked').val(),
+            $('input:radio[name="question6"]:checked').val(),
+            $('input:radio[name="question7"]:checked').val(),
+            $('input:radio[name="question8"]:checked').val(),
+            $('input:radio[name="question9"]:checked').val(),
+            $('input:radio[name="question10"]:checked').val()
+            ]
+        };
+    console.log(newFriends)
 
-    function surveyComplete() {
-        var isComplete = true;
-        $(".form-group").each(function() {
-            if($(this).val() === "") {
-                isComplete = false;
-            }
-        });
-        $(".selected").each(function() {
-            if($(this).val() === "") {
-                isComplete = false;
-            }
-        });
-        return isComplete;
-    }
+    $.post("/api/friends", newFriends).then(function(data) {
+    console.log("user input", data)
 
-    console.log("lin343", surveyComplete())
-        if (surveyComplete()) {
-         
-            var newFriends = [
-                {
-                name: $("#userName").val().trim(),
-                photo: $("#userImage").val(),
-                score: [
-                    $("#Q1").val(),
-                    $("#Q2").val(),
-                    $("#Q3").val(),
-                    $("$Q4").val(),
-                    $("#Q5").val(),
-                    $("#Q6").val(),
-                    $("#Q7").val(),
-                    $("#Q8").val(),
-                    $("#Q9").val(),
-                    $("#Q10").val()
-                ]
-            }
-        ];
-        console.log(newFriends)
-        $.post("/api/friends", newFriends).then(function(data) {
-        console.log("user input", data)
-    });
-   
-    }
-   
+        
+
+    });    
         
 });
 
- 
+// $("#submit").on("click", function(event) {
+//     event.preventDefault();
+// console.log("heyyy - 328");
+//     function surveyComplete() {
+//         var isComplete = true;
+//         $(".form-group").each(function() {
+//             if($(this).val() === "") {
+//                 isComplete = false;
+//             }
+//         });
+//         $(".selected").each(function() {
+//             if($(this).val() === "") {
+//                 isComplete = false;
+//             }
+//         });
+//         return isComplete;
+//     }
+
+//         if (surveyComplete()) {
+         
+//             var newFriends = [
+//                 {
+//                 name: $("#userName").val().trim(),
+//                 photo: $("#userImage").val(),
+//                 score: [
+//                     $("#Q1").val(),
+//                     $("#Q2").val(),
+//                     $("#Q3").val(),
+//                     $("$Q4").val(),
+//                     $("#Q5").val(),
+//                     $("#Q6").val(),
+//                     $("#Q7").val(),
+//                     $("#Q8").val(),
+//                     $("#Q9").val(),
+//                     $("#Q10").val()
+//                 ]
+//             }
+//         ];
+//         console.log(newFriends)
+
+//         $.post("/api/friends", newFriends).then(function(data) {
+//         console.log("user input", data)
+//     });
+   
+//     }
+   
+        
+// });
+
+
+
+          
 
 
 </script>
