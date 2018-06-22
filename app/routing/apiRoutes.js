@@ -57,7 +57,7 @@ module.exports = function(app) {
         // console.log(name)
         // console.log(photo)
 
-        res.send("Name:" + name + "<img src = ' " + photo + " ' > ");
+        res.send("<h1>' " + name + " '</h1>" +  "<img src = ' " + photo + " ' > ");
 
         // res.json(newFriends);
     });
