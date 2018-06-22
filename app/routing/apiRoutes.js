@@ -30,7 +30,7 @@ module.exports = function(app) {
         for (var i = 0; i < friends.length -1; i++) {
             var scoreMatch = 0;
             for (var j = 0; j < newFriends.score.length; j++) {
-                scoreMatch += Math.abs(parseInt(friends[i].score[i]) - parseInt(newFriends.score[j]));
+                scoreMatch += Math.abs(parseInt(friends[i].score[j]) - parseInt(newFriends.score[j]));
             }
             surveyArr.push(scoreMatch);
         }

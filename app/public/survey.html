@@ -305,7 +305,7 @@
         </button>
       </div>
       <div id="matchMade" class="modal-body">
-        ...
+        <p id="name"></p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -348,6 +348,7 @@ $("#submit").on("click", function(event) {
     $.post("/api/friends", newFriends).then(function(data) {
     console.log("user input", data)
 
+    
      $("#matchMade").html(data) 
 
     });    
